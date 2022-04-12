@@ -1,0 +1,81 @@
+:root {
+    --primary: coral;
+    --dark: black;
+    --light: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.container {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.main {
+    width: 45rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* border: 1px solid red; */
+    /* background-color: bisque; */
+}
+
+.box {
+    height: 20rem;
+    width: 10rem;
+    border: 0.2rem solid var(--primary);
+    transition: 400ms;
+}
+
+.box:hover {
+    box-shadow: 0 0 2rem var(--primary);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* .box:nth-child(2) {
+    margin-left: 10rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+
+.box:nth-child(5) {
+    margin-left: 10rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: blue;
+}
+
+.box:nth-child(8) {
+    margin-left: 10rem;
+    margin-right: 2rem;
+    background-color: blue;
+} */
+
+/* n will be 1 at start like 2 5 8 */
+.box:nth-child(3n-1) {
+    margin-left: 10rem;
+}
+
+.selected {
+    background-color: var(--primary);
+}
+
+.booked {
+    background-color: wheat;
+}
